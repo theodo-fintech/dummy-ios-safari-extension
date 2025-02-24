@@ -9,7 +9,6 @@ import SafariServices
 import os.log
 
 class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
-
     func beginRequest(with context: NSExtensionContext) {
         let request = context.inputItems.first as? NSExtensionItem
 
@@ -20,23 +19,43 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
             profile = request?.userInfo?["profile"] as? UUID
         }
 
-        let message: Any?
+        let messageAny: Any?
         if #available(iOS 15.0, macOS 11.0, *) {
-            message = request?.userInfo?[SFExtensionMessageKey]
+            messageAny = request?.userInfo?[SFExtensionMessageKey]
         } else {
-            message = request?.userInfo?["message"]
+            messageAny = request?.userInfo?["message"]
         }
 
-        os_log(.default, "Received message from browser.runtime.sendNativeMessage: %@ (profile: %@)", String(describing: message), profile?.uuidString ?? "none")
+        os_log(.default, "Received message: %@ (profile: %@)",
+               String(describing: messageAny),
+               profile?.uuidString ?? "none")
+
+        var responseMessage = SafariMessage(type: .unknown)
+        if let dict = messageAny as? [String: Any] {
+            let incoming = SafariMessage(from: dict)
+            switch incoming.type {
+            case .getUserInfo:
+                responseMessage = SafariMessage(
+                    type: .userInfoResponse,
+                    data: [
+                        "firstName": "John",
+                        "lastName": "Doe"
+                    ]
+                )
+            default:
+                break
+            }
+        }
+
+        let responseDict = responseMessage.toDictionary()
 
         let response = NSExtensionItem()
         if #available(iOS 15.0, macOS 11.0, *) {
-            response.userInfo = [ SFExtensionMessageKey: [ "echo": message ] ]
+            response.userInfo = [ SFExtensionMessageKey: responseDict ]
         } else {
-            response.userInfo = [ "message": [ "echo": message ] ]
+            response.userInfo = [ "message": responseDict ]
         }
-
-        context.completeRequest(returningItems: [ response ], completionHandler: nil)
+        
+        context.completeRequest(returningItems: [response], completionHandler: nil)
     }
-
 }

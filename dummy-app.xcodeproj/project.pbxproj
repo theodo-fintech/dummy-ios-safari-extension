@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		124425E82D6CD3F60009F533 /* SafariMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124425E72D6CD3F20009F533 /* SafariMessage.swift */; };
 		128C21182D5E604900083E25 /* dummy-extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 128C21002D5E604900083E25 /* dummy-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		12E22BF02D65EA8F0056D004 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12E22BE92D65EA8F0056D004 /* Preview Assets.xcassets */; };
 		12E22BF12D65EA8F0056D004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12E22BEB2D65EA8F0056D004 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		124425E72D6CD3F20009F533 /* SafariMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariMessage.swift; sourceTree = "<group>"; };
 		128C20EA2D5E602F00083E25 /* dummy-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dummy-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		128C21002D5E604900083E25 /* dummy-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "dummy-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12E22BE92D65EA8F0056D004 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		12E295812D65EB5E0056D004 /* dummy-extension */ = {
 			isa = PBXGroup;
 			children = (
+				124425E72D6CD3F20009F533 /* SafariMessage.swift */,
 				12E2957E2D65EB5E0056D004 /* Resources */,
 				12E2957F2D65EB5E0056D004 /* Info.plist */,
 				12E295802D65EB5E0056D004 /* SafariWebExtensionHandler.swift */,
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12E295842D65EB5F0056D004 /* SafariWebExtensionHandler.swift in Sources */,
+				124425E82D6CD3F60009F533 /* SafariMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

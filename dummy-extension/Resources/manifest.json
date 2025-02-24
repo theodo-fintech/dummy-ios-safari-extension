@@ -15,7 +15,8 @@
     },
 
     "background": {
-        "service_worker": "background.bundle.js"
+        "scripts": ["background.bundle.js"],
+        "persistent": false
     },
 
     "content_scripts": [{
