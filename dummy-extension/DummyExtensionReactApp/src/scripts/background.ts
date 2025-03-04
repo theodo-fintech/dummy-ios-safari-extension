@@ -1,4 +1,4 @@
-import { RequestFromContentToBackground } from "./content.ts";
+import { RequestFromContentToBackground } from "./content.tsx";
 
 type RequestFromBackgroundToApplication = { type: "GET_USER_INFO" };
 type ResponseFromApplicationToBackground = {
@@ -15,7 +15,7 @@ const sendResponseFromBackgroundToContent = (response: unknown) => {
 };
 
 const sendRequestFromBackgroundToApplication = (
-  request: RequestFromBackgroundToApplication,
+  request: RequestFromBackgroundToApplication
 ) => {
   console.log("Sending request from background to application", request);
   return browser.runtime.sendNativeMessage("dummy-extension", request);

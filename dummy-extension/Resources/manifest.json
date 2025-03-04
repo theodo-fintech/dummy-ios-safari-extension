@@ -1,38 +1,40 @@
 {
-    "manifest_version": 3,
-    "default_locale": "en",
+  "manifest_version": 3,
+  "default_locale": "en",
 
-    "name": "Dummy Extension",
-    "description": "This is dummy-extension.",
-    "version": "1.0",
+  "name": "Dummy Extension",
+  "description": "This is dummy-extension.",
+  "version": "1.0",
 
-    "icons": {
-        "48": "images/icon-48.png",
-        "96": "images/icon-96.png",
-        "128": "images/icon-128.png",
-        "256": "images/icon-256.png",
-        "512": "images/icon-512.png"
-    },
+  "icons": {
+    "48": "images/icon-48.png",
+    "96": "images/icon-96.png",
+    "128": "images/icon-128.png",
+    "256": "images/icon-256.png",
+    "512": "images/icon-512.png"
+  },
 
-    "background": {
-        "scripts": ["background.bundle.js"],
-        "persistent": false
-    },
+  "background": {
+    "service_worker": "background.bundle.js"
+  },
 
-    "content_scripts": [{
-        "js": [ "content.bundle.js" ],
-        "matches": [ "<all_urls>" ]
-    }],
+  "content_scripts": [
+    {
+      "js": ["content.bundle.js"],
+      "css": ["content.bundle.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
 
-    "action": {
-        "default_icon": "images/toolbar-icon.svg"
-    },
+  "action": {
+    "default_icon": "images/toolbar-icon.svg"
+  },
 
-    "permissions": ["nativeMessaging"],
-    "web_accessible_resources": [
-        {
-            "resources": ["main.bundle.js"],
-            "matches":["<all_urls>"]
-        }
-    ]
+  "permissions": ["nativeMessaging"],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
