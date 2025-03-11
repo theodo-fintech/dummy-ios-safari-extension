@@ -1,0 +1,4 @@
+# Navigate to React App folder (necessary to make Husky work)
+cd dummy-extension/DummyExtensionReactApp
+
+npm run build
