@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1240E1E52D807CFB00ED481D /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 1240E1DD2D807CFB00ED481D /* _locales */; };
+		1240E1E62D807CFB00ED481D /* background.bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 1240E1DE2D807CFB00ED481D /* background.bundle.js */; };
+		1240E1E72D807CFB00ED481D /* content.bundle.css in Resources */ = {isa = PBXBuildFile; fileRef = 1240E1DF2D807CFB00ED481D /* content.bundle.css */; };
+		1240E1E82D807CFB00ED481D /* content.bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 1240E1E02D807CFB00ED481D /* content.bundle.js */; };
+		1240E1E92D807CFB00ED481D /* images in Resources */ = {isa = PBXBuildFile; fileRef = 1240E1E12D807CFB00ED481D /* images */; };
+		1240E1EA2D807CFB00ED481D /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 1240E1E22D807CFB00ED481D /* manifest.json */; };
 		124425E82D6CD3F60009F533 /* SafariMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124425E72D6CD3F20009F533 /* SafariMessage.swift */; };
 		128C21182D5E604900083E25 /* dummy-extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 128C21002D5E604900083E25 /* dummy-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		12E22BF02D65EA8F0056D004 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12E22BE92D65EA8F0056D004 /* Preview Assets.xcassets */; };
@@ -14,12 +20,6 @@
 		12E22BF22D65EA8F0056D004 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E22BEC2D65EA8F0056D004 /* ContentView.swift */; };
 		12E22BF32D65EA8F0056D004 /* dummy_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E22BEE2D65EA8F0056D004 /* dummy_appApp.swift */; };
 		12E295842D65EB5F0056D004 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E295802D65EB5E0056D004 /* SafariWebExtensionHandler.swift */; };
-		12E2A4582D65EB5F0056D004 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 12E295762D65EB5E0056D004 /* _locales */; };
-		12E2A4592D65EB5F0056D004 /* background.bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 12E295772D65EB5E0056D004 /* background.bundle.js */; };
-		12E2A45A2D65EB5F0056D004 /* content.bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 12E295782D65EB5E0056D004 /* content.bundle.js */; };
-		12E2A45B2D65EB5F0056D004 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 12E295792D65EB5E0056D004 /* images */; };
-		12E2A45E2D65EB5F0056D004 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 12E2957C2D65EB5E0056D004 /* manifest.json */; };
-		788AEEF02D7708CA00BDD623 /* content.bundle.css in Resources */ = {isa = PBXBuildFile; fileRef = 788AEEEF2D7708CA00BDD623 /* content.bundle.css */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +47,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1240E1DD2D807CFB00ED481D /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
+		1240E1DE2D807CFB00ED481D /* background.bundle.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.bundle.js; sourceTree = "<group>"; };
+		1240E1DF2D807CFB00ED481D /* content.bundle.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = content.bundle.css; sourceTree = "<group>"; };
+		1240E1E02D807CFB00ED481D /* content.bundle.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.bundle.js; sourceTree = "<group>"; };
+		1240E1E12D807CFB00ED481D /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		1240E1E22D807CFB00ED481D /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
 		124425E72D6CD3F20009F533 /* SafariMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariMessage.swift; sourceTree = "<group>"; };
 		128C20EA2D5E602F00083E25 /* dummy-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dummy-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		128C21002D5E604900083E25 /* dummy-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "dummy-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,18 +61,12 @@
 		12E22BEC2D65EA8F0056D004 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		12E22BED2D65EA8F0056D004 /* dummy_app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = dummy_app.entitlements; sourceTree = "<group>"; };
 		12E22BEE2D65EA8F0056D004 /* dummy_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy_appApp.swift; sourceTree = "<group>"; };
-		12E295762D65EB5E0056D004 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
-		12E295772D65EB5E0056D004 /* background.bundle.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.bundle.js; sourceTree = "<group>"; };
-		12E295782D65EB5E0056D004 /* content.bundle.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.bundle.js; sourceTree = "<group>"; };
-		12E295792D65EB5E0056D004 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
-		12E2957C2D65EB5E0056D004 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
 		12E2957F2D65EB5E0056D004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12E295802D65EB5E0056D004 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
-		788AEEEF2D7708CA00BDD623 /* content.bundle.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = content.bundle.css; path = "dummy-extension/Resources/content.bundle.css"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		12E2A4622D65ECB40056D004 /* assets */ = {
+		1240E1EC2D807D0400ED481D /* assets */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = assets;
 			sourceTree = "<group>";
@@ -91,10 +91,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1240E1E32D807CFB00ED481D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1240E1EC2D807D0400ED481D /* assets */,
+				1240E1DD2D807CFB00ED481D /* _locales */,
+				1240E1DE2D807CFB00ED481D /* background.bundle.js */,
+				1240E1DF2D807CFB00ED481D /* content.bundle.css */,
+				1240E1E02D807CFB00ED481D /* content.bundle.js */,
+				1240E1E12D807CFB00ED481D /* images */,
+				1240E1E22D807CFB00ED481D /* manifest.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		128C20E12D5E602F00083E25 = {
 			isa = PBXGroup;
 			children = (
-				788AEEEF2D7708CA00BDD623 /* content.bundle.css */,
 				12E22BEF2D65EA8F0056D004 /* dummy-app */,
 				12E295812D65EB5E0056D004 /* dummy-extension */,
 				128C20EB2D5E602F00083E25 /* Products */,
@@ -130,24 +143,11 @@
 			path = "dummy-app";
 			sourceTree = "<group>";
 		};
-		12E2957E2D65EB5E0056D004 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				12E2A4622D65ECB40056D004 /* assets */,
-				12E295762D65EB5E0056D004 /* _locales */,
-				12E295772D65EB5E0056D004 /* background.bundle.js */,
-				12E295782D65EB5E0056D004 /* content.bundle.js */,
-				12E295792D65EB5E0056D004 /* images */,
-				12E2957C2D65EB5E0056D004 /* manifest.json */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		12E295812D65EB5E0056D004 /* dummy-extension */ = {
 			isa = PBXGroup;
 			children = (
 				124425E72D6CD3F20009F533 /* SafariMessage.swift */,
-				12E2957E2D65EB5E0056D004 /* Resources */,
+				1240E1E32D807CFB00ED481D /* Resources */,
 				12E2957F2D65EB5E0056D004 /* Info.plist */,
 				12E295802D65EB5E0056D004 /* SafariWebExtensionHandler.swift */,
 			);
@@ -191,7 +191,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				12E2A4622D65ECB40056D004 /* assets */,
+				1240E1EC2D807D0400ED481D /* assets */,
 			);
 			name = "dummy-extension";
 			packageProductDependencies = (
@@ -252,12 +252,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12E2A4582D65EB5F0056D004 /* _locales in Resources */,
-				12E2A4592D65EB5F0056D004 /* background.bundle.js in Resources */,
-				12E2A45A2D65EB5F0056D004 /* content.bundle.js in Resources */,
-				12E2A45B2D65EB5F0056D004 /* images in Resources */,
-				788AEEF02D7708CA00BDD623 /* content.bundle.css in Resources */,
-				12E2A45E2D65EB5F0056D004 /* manifest.json in Resources */,
+				1240E1E52D807CFB00ED481D /* _locales in Resources */,
+				1240E1E62D807CFB00ED481D /* background.bundle.js in Resources */,
+				1240E1E72D807CFB00ED481D /* content.bundle.css in Resources */,
+				1240E1E82D807CFB00ED481D /* content.bundle.js in Resources */,
+				1240E1E92D807CFB00ED481D /* images in Resources */,
+				1240E1EA2D807CFB00ED481D /* manifest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
