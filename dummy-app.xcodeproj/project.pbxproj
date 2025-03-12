@@ -20,6 +20,7 @@
 		12E22BF22D65EA8F0056D004 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E22BEC2D65EA8F0056D004 /* ContentView.swift */; };
 		12E22BF32D65EA8F0056D004 /* dummy_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E22BEE2D65EA8F0056D004 /* dummy_appApp.swift */; };
 		12E295842D65EB5F0056D004 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E295802D65EB5E0056D004 /* SafariWebExtensionHandler.swift */; };
+		78ABFA582D8188810083EC96 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 78ABFA572D81887E0083EC96 /* assets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,15 +64,8 @@
 		12E22BEE2D65EA8F0056D004 /* dummy_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy_appApp.swift; sourceTree = "<group>"; };
 		12E2957F2D65EB5E0056D004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12E295802D65EB5E0056D004 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		78ABFA572D81887E0083EC96 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		1240E1EC2D807D0400ED481D /* assets */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = assets;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		128C20E72D5E602F00083E25 /* Frameworks */ = {
@@ -94,7 +88,7 @@
 		1240E1E32D807CFB00ED481D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1240E1EC2D807D0400ED481D /* assets */,
+				78ABFA572D81887E0083EC96 /* assets */,
 				1240E1DD2D807CFB00ED481D /* _locales */,
 				1240E1DE2D807CFB00ED481D /* background.bundle.js */,
 				1240E1DF2D807CFB00ED481D /* content.bundle.css */,
@@ -190,9 +184,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				1240E1EC2D807D0400ED481D /* assets */,
-			);
 			name = "dummy-extension";
 			packageProductDependencies = (
 			);
@@ -254,6 +245,7 @@
 			files = (
 				1240E1E52D807CFB00ED481D /* _locales in Resources */,
 				1240E1E62D807CFB00ED481D /* background.bundle.js in Resources */,
+				78ABFA582D8188810083EC96 /* assets in Resources */,
 				1240E1E72D807CFB00ED481D /* content.bundle.css in Resources */,
 				1240E1E82D807CFB00ED481D /* content.bundle.js in Resources */,
 				1240E1E92D807CFB00ED481D /* images in Resources */,

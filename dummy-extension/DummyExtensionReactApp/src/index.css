@@ -70,3 +70,162 @@
     background-color: #f9f9f9;
   }
 }
+
+/* Overlay Styles - Added from App.css */
+
+/* Overlay base styles */
+#dummy-extension-root .dummy-extension-overlay {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #333;
+  position: relative;
+}
+
+/* Profile toggle button */
+#dummy-extension-root .profile-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4a86e8;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2147483647; /* Maximum z-index */
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+  padding: 12px;
+}
+
+#dummy-extension-root .profile-button:hover {
+  transform: scale(1.05);
+  background-color: #3a76d8;
+  border-color: transparent; /* Override the default button hover style */
+}
+
+#dummy-extension-root .profile-button img {
+  width: 100%;
+  height: 100%;
+  color: white;
+  filter: brightness(0) invert(1); /* Make SVG white */
+}
+
+/* Overlay container */
+#dummy-extension-root .profile-overlay {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  z-index: 2147483646; /* One less than the button */
+  animation: slide-in 0.3s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Overlay header */
+#dummy-extension-root .overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  background-color: #f8f9fa;
+}
+
+#dummy-extension-root .overlay-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+#dummy-extension-root .close-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+#dummy-extension-root .close-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-color: transparent; /* Override the default button hover style */
+}
+
+/* Overlay content */
+#dummy-extension-root .overlay-content {
+  padding: 20px;
+}
+
+#dummy-extension-root .user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#dummy-extension-root .profile-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+#dummy-extension-root .user-name {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+#dummy-extension-root .loading-state {
+  text-align: center;
+  padding: 10px 0;
+}
+
+#dummy-extension-root .loading-state p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+#dummy-extension-root .fetch-button {
+  background-color: #4a86e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#dummy-extension-root .fetch-button:hover {
+  background-color: #3a76d8;
+  border-color: transparent; /* Override the default button hover style */
+}

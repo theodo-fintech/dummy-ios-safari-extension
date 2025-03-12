@@ -1,7 +1,7 @@
 import { RequestFromViewToContent } from "../App.tsx";
 import { createRoot } from "react-dom/client";
 import "../index.css";
-import App from "../App.tsx";
+import { App } from "../App.tsx";
 
 const IS_EXTENSION = typeof browser !== "undefined";
 
@@ -13,6 +13,14 @@ type ResponseFromBackgroundToContent = {
     firstName: string;
     lastName: string;
   };
+};
+
+// Get URL for extension resources using browser.runtime.getURL
+const getExtensionResourceUrl = (path: string): string => {
+  if (IS_EXTENSION) {
+    return browser.runtime.getURL(path);
+  }
+  return path; // Fallback for non-extension environment
 };
 
 const sendRequestFromContentToBackground = (
@@ -28,6 +36,18 @@ const sendResponseFromContentToView = (response: unknown) => {
   window.postMessage(typedResponse, "*");
 };
 
+// Create a message to send extension resource URLs to the React app
+const sendExtensionResourceUrls = () => {
+  const resourceUrls = {
+    type: "EXTENSION_RESOURCE_URLS",
+    data: {
+      xxlImage: getExtensionResourceUrl("assets/xxl.png"),
+    },
+  };
+  console.log("Sending extension resource URLs to view", resourceUrls);
+  window.postMessage(resourceUrls, "*");
+};
+
 if (IS_EXTENSION) {
   window.addEventListener(
     "message",
@@ -37,9 +57,17 @@ if (IS_EXTENSION) {
         return sendRequestFromContentToBackground({
           type: "GET_USER_INFO",
         }).then(sendResponseFromContentToView);
+      } else if (event.data.type === "GET_EXTENSION_RESOURCES") {
+        // Handle request to get extension resources
+        sendExtensionResourceUrls();
       }
     }
   );
+
+  // Send resource URLs as soon as content script loads
+  setTimeout(() => {
+    sendExtensionResourceUrls();
+  }, 100);
 }
 
 const root = document.createElement("div");

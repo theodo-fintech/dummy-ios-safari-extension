@@ -5,7 +5,6 @@ import { resolve } from "path";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "./",
   build: {
     outDir: "../Resources",
     rollupOptions: {
@@ -22,6 +21,19 @@ export default defineConfig({
           return "assets/[name][extname]";
         },
       },
+      plugins: [
+        {
+          name: "bundle-in-iife",
+          generateBundle(_, bundle) {
+            Object.keys(bundle).forEach((key) => {
+              const file = bundle[key];
+              if (key.slice(-3) === ".js" && "code" in file) {
+                file.code = `(() => {\n${file.code}\n})()`;
+              }
+            });
+          },
+        },
+      ],
     },
   },
 });
